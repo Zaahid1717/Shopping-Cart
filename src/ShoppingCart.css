@@ -1,0 +1,54 @@
+/* Container for the entire shopping cart layout */
+.container {
+    height: 100vh; /* Full viewport height */
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; /* Prevents horizontal overflow */
+}
+
+/* Left section (Product List) */
+.left {
+    flex: 3; /* Takes up more space relative to the right */
+    padding: 20px; /* Adds space inside the border */
+    border-right: 2px solid black; /* Separates left and right visually */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+/* Right section (Cart Summary) */
+.right {
+    flex: 1; /* Takes up less space */
+    padding: 20px;
+    border-left: 2px solid black; /* Separates left and right visually */
+    background-color: #f9f9f9; /* Adds a subtle background for contrast */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+/* General improvements */
+body {
+    font-family: Arial, sans-serif; /* Consistent, clean font choice */
+    margin: 0; /* Remove default margin */
+    padding: 0;
+}
+
+h3, h5 {
+    margin-top: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* Adjusts height for smaller screens */
+    }
+
+    .left, .right {
+        border: none; /* Remove borders for smaller screens */
+        padding: 10px;
+        height: auto;
+    }
+}
